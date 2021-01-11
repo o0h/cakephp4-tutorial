@@ -1,4 +1,4 @@
-.PHONY: default help init up down sh ps logs
+.PHONY: default help init up down sh ps logs clear-db php-lint composer-self-update
 
 default: init up
 
