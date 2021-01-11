@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="PhpCSFixer">
+    <phpcsfixer_settings>
+      <PhpCSFixerConfiguration tool_path="$PROJECT_DIR$/bin/phpcs-fixer.sh" />
+      <phpcs_fixer_by_interpreter interpreter_id="5fb0e081-b820-42c0-a84f-d2fc0afabcc5" standards="PSR1;PSR2;Symfony;DoctrineAnnotation;PHP70Migration;PHP71Migration" tool_path="/app/vendor/bin/php-cs-fixer" timeout="30000" />
+    </phpcsfixer_settings>
+  </component>
+  <component name="PhpCodeSniffer">
+    <phpcs_settings>
+      <PhpCSConfiguration beautifier_path="$PROJECT_DIR$/app/vendor/bin/phpcbf" tool_path="$PROJECT_DIR$/app/vendor/bin/phpcs" />
+      <phpcs_by_interpreter interpreter_id="5fb0e081-b820-42c0-a84f-d2fc0afabcc5" beautifier_path="/app/vendor/bin/phpcbf" standards="MySource;PEAR;PSR1;PSR12;PSR2;Squiz;Zend" tool_path="/app/vendor/bin/phpcs" timeout="30000" />
+    </phpcs_settings>
+  </component>
+  <component name="PhpIncludePathManager">
+    <include_path>
+      <path value="$PROJECT_DIR$/app/vendor/symfony/process" />
+      <path value="$PROJECT_DIR$/app/vendor/symfony/service-contracts" />
+      <path value="$PROJECT_DIR$/app/vendor/symfony/polyfill-mbstring" />
+      <path value="$PROJECT_DIR$/app/vendor/symfony/console" />
+      <path value="$PROJECT_DIR$/app/vendor/theseer/tokenizer" />
+      <path value="$PROJECT_DIR$/app/vendor/symfony/polyfill-intl-grapheme" />
+      <path value="$PROJECT_DIR$/app/vendor/composer" />
+      <path value="$PROJECT_DIR$/app/vendor/slevomat/coding-standard" />
+      <path value="$PROJECT_DIR$/app/vendor/doctrine/instantiator" />
+      <path value="$PROJECT_DIR$/app/vendor/m1/env" />
+      <path value="$PROJECT_DIR$/app/vendor/sebastian/comparator" />
+      <path value="$PROJECT_DIR$/app/vendor/robmorgan/phinx" />
+      <path value="$PROJECT_DIR$/app/vendor/psr/http-server-middleware" />
+      <path value="$PROJECT_DIR$/app/vendor/sebastian/object-enumerator" />
+      <path value="$PROJECT_DIR$/app/vendor/psr/http-server-handler" />
+      <path value="$PROJECT_DIR$/app/vendor/sebastian/global-state" />
+      <path value="$PROJECT_DIR$/app/vendor/psr/container" />
+      <path value="$PROJECT_DIR$/app/vendor/sebastian/complexity" />
+      <path value="$PROJECT_DIR$/app/vendor/psr/http-message" />
+      <path value="$PROJECT_DIR$/app/vendor/sebastian/object-reflector" />
+      <path value="$PROJECT_DIR$/app/vendor/psr/log" />
+      <path value="$PROJECT_DIR$/app/vendor/sebastian/diff" />
+      <path value="$PROJECT_DIR$/app/vendor/psr/http-client" />
+      <path value="$PROJECT_DIR$/app/vendor/sebastian/code-unit-reverse-lookup" />
+      <path value="$PROJECT_DIR$/app/vendor/psr/http-factory" />
+      <path value="$PROJECT_DIR$/app/vendor/sebastian/lines-of-code" />
+      <path value="$PROJECT_DIR$/app/vendor/psr/simple-cache" />
+      <path value="$PROJECT_DIR$/app/vendor/sebastian/recursion-context" />
+      <path value="$PROJECT_DIR$/app/vendor/seld/phar-utils" />
+      <path value="$PROJECT_DIR$/app/vendor/sebastian/version" />
+      <path value="$PROJECT_DIR$/app/vendor/psy/psysh" />
+      <path value="$PROJECT_DIR$/app/vendor/sebastian/type" />
+      <path value="$PROJECT_DIR$/app/vendor/twig/markdown-extra" />
+      <path value="$PROJECT_DIR$/app/vendor/sebastian/code-unit" />
+      <path value="$PROJECT_DIR$/app/vendor/seld/jsonlint" />
+      <path value="$PROJECT_DIR$/app/vendor/sebastian/cli-parser" />
+      <path value="$PROJECT_DIR$/app/vendor/jasny/twig-extensions" />
+      <path value="$PROJECT_DIR$/app/vendor/sebastian/exporter" />
+      <path value="$PROJECT_DIR$/app/vendor/twig/twig" />
+      <path value="$PROJECT_DIR$/app/vendor/sebastian/environment" />
+      <path value="$PROJECT_DIR$/app/vendor/nikic/php-parser" />
+      <path value="$PROJECT_DIR$/app/vendor/squizlabs/php_codesniffer" />
+      <path value="$PROJECT_DIR$/app/vendor/jdorn/sql-formatter" />
+      <path value="$PROJECT_DIR$/app/vendor/sebastian/resource-operations" />
+      <path value="$PROJECT_DIR$/app/vendor/league/container" />
+      <path value="$PROJECT_DIR$/app/vendor/dereuromark/cakephp-ide-helper" />
+      <path value="$PROJECT_DIR$/app/vendor/react/promise" />
+      <path value="$PROJECT_DIR$/app/vendor/webmozart/assert" />
+      <path value="$PROJECT_DIR$/app/vendor/cakephp/cakephp-codesniffer" />
+      <path value="$PROJECT_DIR$/app/vendor/josegonzalez/dotenv" />
+      <path value="$PROJECT_DIR$/app/vendor/cakephp/twig-view" />
+      <path value="$PROJECT_DIR$/app/vendor/dealerdirect/phpcodesniffer-composer-installer" />
+      <path value="$PROJECT_DIR$/app/vendor/cakephp/migrations" />
+      <path value="$PROJECT_DIR$/app/vendor/justinrainbow/json-schema" />
+      <path value="$PROJECT_DIR$/app/vendor/cakephp/chronos" />
+      <path value="$PROJECT_DIR$/app/vendor/mobiledetect/mobiledetectlib" />
+      <path value="$PROJECT_DIR$/app/vendor/cakephp/plugin-installer" />
+      <path value="$PROJECT_DIR$/app/vendor/phpdocumentor/type-resolver" />
+      <path value="$PROJECT_DIR$/app/vendor/cakephp/cakephp" />
+      <path value="$PROJECT_DIR$/app/vendor/phpdocumentor/reflection-common" />
+      <path value="$PROJECT_DIR$/app/vendor/cakephp/bake" />
+      <path value="$PROJECT_DIR$/app/vendor/cakephp/debug_kit" />
+      <path value="$PROJECT_DIR$/app/vendor/phpdocumentor/reflection-docblock" />
+      <path value="$PROJECT_DIR$/app/vendor/laminas/laminas-httphandlerrunner" />
+      <path value="$PROJECT_DIR$/app/vendor/dnoegel/php-xdg-base-dir" />
+      <path value="$PROJECT_DIR$/app/vendor/laminas/laminas-diactoros" />
+      <path value="$PROJECT_DIR$/app/vendor/laminas/laminas-zendframework-bridge" />
+      <path value="$PROJECT_DIR$/app/vendor/phar-io/manifest" />
+      <path value="$PROJECT_DIR$/app/vendor/myclabs/deep-copy" />
+      <path value="$PROJECT_DIR$/app/vendor/phpspec/prophecy" />
+      <path value="$PROJECT_DIR$/app/vendor/phar-io/version" />
+      <path value="$PROJECT_DIR$/app/vendor/phpstan/phpdoc-parser" />
+      <path value="$PROJECT_DIR$/app/vendor/phpstan/phpstan" />
+      <path value="$PROJECT_DIR$/app/vendor/phpunit/phpunit" />
+      <path value="$PROJECT_DIR$/app/vendor/phpunit/php-timer" />
+      <path value="$PROJECT_DIR$/app/vendor/phpunit/php-code-coverage" />
+      <path value="$PROJECT_DIR$/app/vendor/phpunit/php-text-template" />
+      <path value="$PROJECT_DIR$/app/vendor/phpunit/php-file-iterator" />
+      <path value="$PROJECT_DIR$/app/vendor/phpunit/php-invoker" />
+      <path value="$PROJECT_DIR$/app/vendor/symfony/polyfill-php80" />
+      <path value="$PROJECT_DIR$/app/vendor/symfony/polyfill-php73" />
+      <path value="$PROJECT_DIR$/app/vendor/symfony/config" />
+      <path value="$PROJECT_DIR$/app/vendor/symfony/polyfill-ctype" />
+      <path value="$PROJECT_DIR$/app/vendor/symfony/filesystem" />
+      <path value="$PROJECT_DIR$/app/vendor/symfony/var-dumper" />
+      <path value="$PROJECT_DIR$/app/vendor/symfony/finder" />
+      <path value="$PROJECT_DIR$/app/vendor/symfony/polyfill-intl-normalizer" />
+      <path value="$PROJECT_DIR$/app/vendor/symfony/deprecation-contracts" />
+      <path value="$PROJECT_DIR$/app/vendor/symfony/string" />
+      <path value="$PROJECT_DIR$/app/vendor/phpstan/phpstan-phpunit" />
+      <path value="$PROJECT_DIR$/app/vendor/phpstan/phpstan-strict-rules" />
+    </include_path>
+  </component>
+  <component name="PhpInterpreters">
+    <interpreters>
+      <interpreter id="5fb0e081-b820-42c0-a84f-d2fc0afabcc5" name="app" home="docker-compose://DATA" debugger_id="php.debugger.XDebug">
+        <remote_data INTERPRETER_PATH="php" HELPERS_PATH="/opt/.phpstorm_helpers" INITIALIZED="false" VALID="true" RUN_AS_ROOT_VIA_SUDO="false" DOCKER_ACCOUNT_NAME="Docker" DOCKER_COMPOSE_SERVICE_NAME="app" DOCKER_REMOTE_PROJECT_PATH="/opt/project">
+          <type_data command="RUN" />
+          <dockerComposeConfigurationPaths>
+            <item value="$PROJECT_DIR$/docker/docker-compose.yml" />
+          </dockerComposeConfigurationPaths>
+          <envs />
+        </remote_data>
+      </interpreter>
+    </interpreters>
+  </component>
+  <component name="PhpInterpretersPhpInfoCache">
+    <phpInfoCache>
+      <interpreter name="app">
+        <phpinfo binary_type="PHP" php_cli="/usr/local/bin/php" path_separator=":" version="8.0.1">
+          <additional_php_ini>/usr/local/etc/php/conf.d/99-xdebug.ini, /usr/local/etc/php/conf.d/docker-php-ext-intl.ini, /usr/local/etc/php/conf.d/docker-php-ext-pdo_mysql.ini, /usr/local/etc/php/conf.d/docker-php-ext-sodium.ini, /usr/local/etc/php/conf.d/docker-php-ext-zip.ini</additional_php_ini>
+          <configuration_file />
+          <configuration_options>
+            <configuration_option name="include_path" value=".:/usr/local/lib/php" />
+          </configuration_options>
+          <debuggers>
+            <debugger_info debugger="xdebug" debugger_version="3.0.2">
+              <debug_extensions />
+            </debugger_info>
+          </debuggers>
+          <loaded_extensions>
+            <extension name="Core" />
+            <extension name="PDO" />
+            <extension name="Phar" />
+            <extension name="Reflection" />
+            <extension name="SPL" />
+            <extension name="SimpleXML" />
+            <extension name="ctype" />
+            <extension name="curl" />
+            <extension name="date" />
+            <extension name="dom" />
+            <extension name="fileinfo" />
+            <extension name="filter" />
+            <extension name="ftp" />
+            <extension name="hash" />
+            <extension name="iconv" />
+            <extension name="intl" />
+            <extension name="json" />
+            <extension name="libxml" />
+            <extension name="mbstring" />
+            <extension name="mysqlnd" />
+            <extension name="openssl" />
+            <extension name="pcre" />
+            <extension name="pdo_mysql" />
+            <extension name="pdo_sqlite" />
+            <extension name="posix" />
+            <extension name="readline" />
+            <extension name="session" />
+            <extension name="sodium" />
+            <extension name="sqlite3" />
+            <extension name="standard" />
+            <extension name="tokenizer" />
+            <extension name="xdebug" />
+            <extension name="xml" />
+            <extension name="xmlreader" />
+            <extension name="xmlwriter" />
+            <extension name="zip" />
+            <extension name="zlib" />
+          </loaded_extensions>
+        </phpinfo>
+      </interpreter>
+    </phpInfoCache>
+  </component>
+  <component name="PhpProjectSharedConfiguration" php_language_level="8.0">
+    <option name="suggestChangeDefaultLanguageLevel" value="false" />
+  </component>
+  <component name="PhpStan">
+    <PhpStan_settings>
+      <PhpStanConfiguration tool_path="/app/phpstan.neon" />
+      <phpstan_by_interpreter interpreter_id="5fb0e081-b820-42c0-a84f-d2fc0afabcc5" tool_path="/app/vendor/bin/phpstan" timeout="60000" />
+    </PhpStan_settings>
+  </component>
+  <component name="PhpUnit">
+    <phpunit_settings>
+      <PhpUnitSettings custom_loader_path="$PROJECT_DIR$/server_app/vendor/autoload.php" />
+      <phpunit_by_interpreter interpreter_id="5fb0e081-b820-42c0-a84f-d2fc0afabcc5" bootstrap_file_path="/app/tests/bootstrap.php" configuration_file_path="/app/phpunit.xml" custom_loader_path="/app/vendor/bin" phpunit_phar_path="" use_bootstrap_file="true" use_configuration_file="true" />
+    </phpunit_settings>
+  </component>
+</project>
