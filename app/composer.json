@@ -30,6 +30,8 @@
     "dereuromark/cakephp-ide-helper": "@stable",
     "josegonzalez/dotenv": "^3.2",
     "phpstan/phpstan": "@stable",
+    "phpstan/phpstan-phpunit": "^0.12.17",
+    "phpstan/phpstan-strict-rules": "^0.12.8",
     "phpunit/phpunit": "~8.5.0 || ^9.3",
     "psy/psysh": "@stable"
   },
