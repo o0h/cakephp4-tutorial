@@ -1,4 +1,4 @@
-.PHONY: default help init up down sh ps logs clear-db php-lint composer-self-update
+.PHONY: default help init up down sh ps logs php-lint clear-db composer-self-update
 
 default: init up
 
@@ -32,6 +32,10 @@ ps: ## 起動中のサービスの一覧を表示します
 
 logs: ## 起動中のサービスのlogを表示します
 	@docker-compose -f docker/docker-compose.yml logs -f
+
+php-lint: ## PHPの静的解析を時刻します
+	@docker-compose -f docker/docker-compose.yml exec app composer cs-check
+	@docker-compose -f docker/docker-compose.yml exec app composer stan
 
 clear-db: down ## DBサービスのデータを削除します
 	@docker-compose -f docker/docker-compose.yml rm database
