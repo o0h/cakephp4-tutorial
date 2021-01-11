@@ -4,5 +4,37 @@ parameters:
     treatPhpDocTypesAsCertain: false
     paths:
         - src
+        - tests
     excludes_analyse:
         - src/Console/Installer.php
+        - tests/bootstrap.php
+    ignoreErrors:
+        - '#Dynamic call to static method PHPUnit\\Framework\\Assert::#'
+        - '#Dynamic call to static method PHPUnit\\Framework\\TestCase::throwException\(\)#'
+
+includes:
+    - vendor/phpstan/phpstan-phpunit/extension.neon
+
+rules:
+   	- PHPStan\Rules\DisallowedConstructs\DisallowedEmptyRule
+   	- PHPStan\Rules\DisallowedConstructs\DisallowedImplicitArrayCreationRule
+   	- PHPStan\Rules\Methods\WrongCaseOfInheritedMethodRule
+   	- PHPStan\Rules\StrictCalls\DynamicCallOnStaticMethodsRule
+   	- PHPStan\Rules\StrictCalls\StrictFunctionCallsRule
+   	- PHPStan\Rules\SwitchConditions\MatchingTypeInSwitchCaseConditionRule
+
+services:
+    -
+      class: PHPStan\Rules\Cast\UselessCastRule
+      arguments:
+        treatPhpDocTypesAsCertain: %treatPhpDocTypesAsCertain%
+      tags:
+        - phpstan.rules.rule
+    -
+      class: PHPStan\Rules\SwitchConditions\MatchingTypeInSwitchCaseConditionRule
+      tags:
+        - phpstan.rules.rule
+    -
+      class: PHPStan\Rules\DisallowedConstructs\DisallowedBacktickRule
+      tags:
+        - phpstan.rules.rule
