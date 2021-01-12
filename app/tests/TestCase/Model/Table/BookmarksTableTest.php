@@ -25,6 +25,7 @@ class BookmarksTableTest extends TestCase
      */
     protected $fixtures = [
         'app.Bookmarks',
+        'app.BookmarksTags',
         'app.Users',
         'app.Tags',
     ];
@@ -71,5 +72,21 @@ class BookmarksTableTest extends TestCase
     public function testBuildRules(): void
     {
         $this->markTestIncomplete('Not implemented yet.');
+    }
+
+    public function testFindTags(): void
+    {
+        $option = ['tags' => 'Lorem ipsum dolor sit amet'];
+        $actual = $this->Bookmarks->find('tagged', $option);
+
+        $expectedTaggedBookmarkIdList = [1];
+        $actualTaggedBookmarkIdList = $actual->all()
+            ->extract('id')
+            ->toList();
+
+        $this->assertSame(
+            $expectedTaggedBookmarkIdList,
+            $actualTaggedBookmarkIdList
+        );
     }
 }

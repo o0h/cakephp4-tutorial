@@ -4,6 +4,7 @@ declare(strict_types=1);
 namespace App\Test\TestCase\Controller;
 
 use App\Controller\BookmarksController;
+use App\Model\Entity\Bookmark;
 use Cake\TestSuite\IntegrationTestTrait;
 use Cake\TestSuite\TestCase;
 
@@ -45,7 +46,19 @@ class BookmarksControllerTest extends TestCase
      */
     public function testView(): void
     {
-        $this->markTestIncomplete('Not implemented yet.');
+        $this->session([
+            'Auth' => [
+                'User' => [
+                    'id' => 1,
+                ],
+            ],
+        ]);
+        $this->get('/bookmarks/view/1');
+
+        $this->assertResponseOk();
+        /** @var Bookmark $actualBookmark */
+        $actualBookmark = $this->viewVariable('bookmark');
+        $this->assertSame(1, $actualBookmark->id);
     }
 
     /**
