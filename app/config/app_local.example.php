@@ -5,6 +5,11 @@
  * Note: It is not recommended to commit files with credentials such as app_local.php
  * into source code version control.
  */
+
+use Cake\Console\ConsoleOutput;
+use Cake\Log\Engine\ConsoleLog;
+use Cake\Log\Engine\FileLog;
+
 return [
     /*
      * Debug Level:
@@ -15,7 +20,7 @@ return [
      * Development Mode:
      * true: Errors and warnings shown.
      */
-    'debug' => filter_var(env('DEBUG', true), FILTER_VALIDATE_BOOLEAN),
+    'debug' => filter_var(env('DEBUG', false), FILTER_VALIDATE_BOOLEAN),
 
     /*
      * Security and encryption configuration
@@ -36,43 +41,50 @@ return [
      */
     'Datasources' => [
         'default' => [
-            'host' => 'localhost',
-            /*
-             * CakePHP will use the default DB port based on the driver selected
-             * MySQL on MAMP uses port 8889, MAMP users will want to uncomment
-             * the following line and set the port accordingly
-             */
-            //'port' => 'non_standard_port_number',
-
-            'username' => 'my_app',
-            'password' => 'secret',
-
-            'mysql' => 'my_app',
-            /*
-             * If not using the default 'public' schema with the PostgreSQL driver
-             * set it here.
-             */
-            //'schema' => 'myapp',
-
-            /*
-             * You can use a DSN string to set the entire configuration
-             */
-            'url' => env('DATABASE_URL', null),
+            'host' => env('DB_HOST'),
+            'username' => env('DB_USER'),
+            'password' => env('DB_PASSWORD'),
+            'database' => env('DB_NAME'),
         ],
 
         /*
          * The test connection is used during the test suite.
          */
         'test' => [
-            'host' => 'localhost',
-            //'port' => 'non_standard_port_number',
-            'username' => 'my_app',
-            'password' => 'secret',
-            'mysql' => 'test_myapp',
-            //'schema' => 'myapp',
-            'url' => env('DATABASE_TEST_URL', null),
+            'host' => env('DB_HOST'),
+            'username' => env('DB_USER'),
+            'password' => env('DB_PASSWORD'),
+            'database' => 'test_' . env('DB_NAME'),
         ],
     ],
+    /*
+     * Configures logging options
+     */
+    'Log' => [
+        'debug' => [
+            'className' => ConsoleLog::class,
+            'stream' => 'php://stdout',
+            'outputAs' => ConsoleOutput::PLAIN,
+            'scopes' => false,
+            'levels' => ['notice', 'info', 'debug'],
+        ],
+        'error' => [
+            'className' => ConsoleLog::class,
+            'stream' => 'php://stderr',
+            'outputAs' => ConsoleOutput::PLAIN,
+            'scopes' => false,
+            'levels' => ['warning', 'error', 'critical', 'alert', 'emergency'],
+        ],
+        // To enable this dedicated query log, you need set your datasource's log flag to true
+        'queries' => [
+            'className' => FileLog::class,
+            'path' => LOGS,
+            'file' => 'queries',
+            'url' => env('LOG_QUERIES_URL', null),
+            'scopes' => ['queriesLog'],
+        ],
+    ],
+
 
     /*
      * Email configuration.
