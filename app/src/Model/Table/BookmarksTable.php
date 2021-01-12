@@ -119,6 +119,7 @@ class BookmarksTable extends Table
 
         return $bookmarks->group(['Bookmarks.id']);
     }
+    
     protected function _buildTags($tagString)
     {
         // タグに trim 適用
